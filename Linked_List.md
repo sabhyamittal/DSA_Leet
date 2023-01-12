@@ -1,4 +1,4 @@
-Question 1:
+#### Question 1:
 Given the head of a singly linked list, reverse the list, and return the reversed list.
 Solution:
 class Solution {
@@ -16,7 +16,7 @@ public:
     }
 };
 
-Question 2:
+#### Question 2:
 Given the head of a linked list, remove the nth node from the end of the list and return its head.
 Solution:
 class Solution {

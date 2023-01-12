@@ -1,6 +1,7 @@
 #### Question 1:
 Given the head of a singly linked list, reverse the list, and return the reversed list.
 Solution:
+```
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
@@ -15,10 +16,12 @@ public:
         return dummynode;
     }
 };
+```
 
 #### Question 2:
 Given the head of a linked list, remove the nth node from the end of the list and return its head.
 Solution:
+```
 class Solution {
 public:
     ListNode* removeNthFromEnd(ListNode* head, int n) {
@@ -39,6 +42,6 @@ public:
         return dummy->next;
     }
 };
-
-Question 3:
+```
+#### Question 3:
 Solution:

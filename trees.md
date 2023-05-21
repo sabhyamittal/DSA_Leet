@@ -138,3 +138,63 @@ public:
     }
 };
 ```
+#### Zigzag order traversal
+```
+class Solution {
+public:
+    vector<vector<int>> zigzagLevelOrder(TreeNode* root) {
+        
+        vector<vector<int>>ans;
+        if(root==NULL)return {};
+        queue<TreeNode*>q;
+        q.push(root);
+        while(!q.empty())
+        {
+            int j=q.size();
+            vector<int>res;
+            for(int i=0 ;i<j ;i++)
+            {
+                auto p=q.front();
+                q.pop();
+                res.push_back(p->val);
+                if(p->left)q.push(p->left);
+                if(p->right)q.push(p->right);
+            }
+            ans.push_back(res);
+        }
+        for(int i=0;i<ans.size();i++)
+        {
+          if(i%2!=0){
+              reverse(ans[i].begin(),ans[i].end());
+          }
+       }
+        return ans;
+    }
+};
+```
+#### Minimum depth of binary tree
+```
+class Solution {
+public:
+    int minDepth(TreeNode* root) {
+       if(root==NULL)return 0;
+        queue<TreeNode*>q;
+        q.push(root);
+        int depth=0;
+        while(!q.empty())
+        {           
+            int j=q.size();
+            for(int i=0 ;i<j;i++)
+            {
+                auto p=q.front();
+                q.pop();
+                if(p->left==NULL && p->right==NULL)return depth+1;
+                if(p->left)q.push(p->left);
+                if(p->right)q.push(p->right);
+            }       
+            depth++;
+        }
+        return depth;
+    }
+};
+```

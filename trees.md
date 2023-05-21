@@ -1,5 +1,5 @@
 #### Symmetric tree
-
+```
 class Solution {
 public:
     bool isSameTree(TreeNode* p, TreeNode* q) {
@@ -9,3 +9,4 @@ public:
         return isSameTree(p->left,q->left)&&isSameTree(p->right,q->right);
     }
 };
+```

@@ -238,4 +238,23 @@ public:
     }
 };
 ```
+#### Diameter of Binary Tree
+```
+class Solution {
+public:
+    int diameterOfBinaryTree(TreeNode* root) {
+        int maxi=0;
+        dia(root,maxi);
+        return maxi;
+    }
+    int dia(TreeNode*root,int &maxi){
+        if(root==NULL)return 0;
+        int lh=dia(root->left,maxi);
+        int rh=dia(root->right,maxi);
+        maxi=max(maxi,(lh+rh));
+        return 1+max(lh,rh);
+    }
+};
+
+```
 
